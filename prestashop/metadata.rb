@@ -6,10 +6,7 @@ description 'Installs/Configures prestashop'
 long_description 'Installs/Configures prestashop'
 version '0.1.0'
 chef_version '>= 13.0'
-depends 'apache2', '~> 7.1.1'
 depends 'docker', '~> 4.9.3'
-depends 'mariadb', '~> 2.1.0'
-depends 'php', '~> 7.0.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
