@@ -1,6 +1,6 @@
 name 'prestashop'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'J. Francisco Martín'
+maintainer_email 'jfm.lisaso@gmx.com'
 license 'All Rights Reserved'
 description 'Installs/Configures prestashop'
 long_description 'Installs/Configures prestashop'

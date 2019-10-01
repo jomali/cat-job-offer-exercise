@@ -1,4 +1,6 @@
-CREATE DATABASE prestashop;
-CREATE USER 'ps_user'@'localhost' IDENTIFIED BY 'ps_user';
-GRANT ALL ON prestashop.* TO 'ps_user'@'localhost';
+DROP DATABASE IF EXISTS <%= node['prestashop']['psdb_name'] %>;
+DROP USER IF EXISTS '<%= node['prestashop']['psdb_user'] %>'@'<%= node['prestashop']['psdb_server'] %>';
+CREATE DATABASE <%= node['prestashop']['psdb_name'] %>;
+CREATE USER '<%= node['prestashop']['psdb_user'] %>'@'<%= node['prestashop']['psdb_server'] %>' IDENTIFIED BY '<%= node['prestashop']['psdb_user'] %>';
+GRANT ALL ON <%= node['prestashop']['psdb_name'] %>.* TO '<%= node['prestashop']['psdb_user'] %>'@'<%= node['prestashop']['psdb_server'] %>';
 FLUSH PRIVILEGES;
