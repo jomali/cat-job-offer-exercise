@@ -15,7 +15,6 @@ bash 'download-prestashop' do
     unzip prestashop_*.zip
     unzip prestashop.zip -d /var/www/html/prestashop
     chmod -R 777 /var/www/html/prestashop/
-    rm index.php
     rm prestashop*.zip
     EOH
   cwd '/tmp'

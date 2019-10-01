@@ -1,0 +1,4 @@
+CREATE DATABASE prestashop;
+CREATE USER 'ps_user'@'localhost' IDENTIFIED BY 'ps_user';
+GRANT ALL ON prestashop.* TO 'ps_user'@'localhost';
+FLUSH PRIVILEGES;
