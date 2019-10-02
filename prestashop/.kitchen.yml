@@ -3,6 +3,7 @@ driver:
   name: vagrant
   network:
     - ["forwarded_port", {guest: 80, host: 8080, protocol: "tcp"}]
+    - ["forwarded_port", {guest: 8080, host: 8081, protocol: "tcp"}]
     - ["forwarded_port", {guest: 443, host: 8443, protocol: "tcp"}]
 
 # The forwarded_port port feature lets you connect to ports on the VM guest via
@@ -16,8 +17,8 @@ provisioner:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
 
-# verifier:
-#   name: inspec
+verifier:
+  name: inspec
 
 platforms:
   - name: ubuntu-18.04
@@ -26,7 +27,7 @@ suites:
   - name: default
     run_list:
       - recipe[prestashop::default]
-    # verifier:
-    #   inspec_tests:
-    #     - test/integration/default
+    verifier:
+      inspec_tests:
+        - test/integration/default
     attributes:
